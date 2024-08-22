@@ -1,0 +1,20 @@
+<?php
+
+namespace {{ namespace }};
+
+use Filament\Forms\Components\Builder\Block;
+use MartinRo\FilamentBlocks\Components\FilamentBlock;
+use Filament\Forms;
+
+class {{ class }} extends FilamentBlock
+{
+    public static function getBlockSchema(): Block
+    {
+        return Block::make('{{ shortName }}')
+            ->label('{{ label }}')
+            ->icon('heroicon-o-rectangle-stack')
+            ->schema([
+                //
+            ]);
+    }
+}
