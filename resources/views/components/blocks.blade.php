@@ -1,11 +1,10 @@
-@php use Illuminate\Support\Facades\File; @endphp
-@props([
-	'blocks' => null,
-	'provider' => null,
-])
+@props(["blocks" => null])
 
-@if(is_array($blocks) && $provider)
+@if(is_iterable($blocks))
 	@foreach ($blocks as $block)
-		@include($provider.'::components.' . $block['type'], [...$block['data']])
+		<x-dynamic-component
+				:component="'blocks.'.$block['type']"
+				:attributes="new \Illuminate\View\ComponentAttributeBag($block['data'])"
+		/>
 	@endforeach
 @endif

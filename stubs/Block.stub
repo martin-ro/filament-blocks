@@ -12,7 +12,8 @@ class {{ class }} extends FilamentBlock
     {
         return Block::make('{{ shortName }}')
             ->label('{{ label }}')
-            ->icon('heroicon-o-rectangle-stack')
+            ->icon('phosphor-cards-three')
+            ->preview('{{ componentPath }}')
             ->schema([
                 //
             ]);

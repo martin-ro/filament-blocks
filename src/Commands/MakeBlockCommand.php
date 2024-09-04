@@ -75,6 +75,7 @@ class MakeBlockCommand extends Command
             'namespace' => 'App\\Forms\\Components\\Blocks'.($blockNamespace !== '' ? "\\{$blockNamespace}" : ''),
             'label' => $label,
             'shortName' => $shortName,
+            'componentPath' => "components.blocks.$shortName",
         ]);
 
         $this->copyStubToApp('BlockView', $viewPath);

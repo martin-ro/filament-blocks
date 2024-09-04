@@ -59,7 +59,7 @@ class FilamentBlocksServiceProvider extends PackageServiceProvider
         }
 
         $namespace = Str::of($namespace);
-        ray($namespace);
+
         array_merge(
             $register,
             collect($filesystem->allFiles($directory))
