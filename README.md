@@ -50,7 +50,7 @@ and its corresponding blade component view:
 ## Using Blocks in your template
 
 ```html
-<x-filament-blocks::page-blocks :blocks="$page->blocks" />
+<x-filament-blocks::blocks :blocks="$page->blocks" />
 ```
 
 ## Credits
