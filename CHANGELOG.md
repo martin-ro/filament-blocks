@@ -2,6 +2,11 @@
 
 All notable changes to `filament-blocks` will be documented in this file.
 
+## 1.0.2 - 2024-09-05
+
+- Update README to include CHANGELOG reference
+- Add CHANGELOG and LICENSE
+
 ## 1.0.1 - 2024-09-05
 
 - First release
