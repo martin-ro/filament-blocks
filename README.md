@@ -53,6 +53,10 @@ and its corresponding blade component view:
 <x-filament-blocks::blocks :blocks="$page->blocks" />
 ```
 
+## Changelog
+
+Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
+
 ## Credits
 
 - [Martin Ro](https://github.com/martin-ro)
