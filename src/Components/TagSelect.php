@@ -4,7 +4,7 @@ namespace MartinRo\FilamentBlocks\Components;
 
 use Filament\Forms\Components\Select;
 
-class HeadingTagSelect extends Select
+class TagSelect extends Select
 {
     public static function make(
         string $name = 'heading_tag',
@@ -23,6 +23,8 @@ class HeadingTagSelect extends Select
                 'h4' => 'h4',
                 'h5' => 'h5',
                 'h6' => 'h6',
+                'p' => 'p',
+                'div' => 'div',
             ]);
     }
 }
