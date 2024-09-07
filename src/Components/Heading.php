@@ -5,6 +5,7 @@ namespace MartinRo\FilamentBlocks\Components;
 use Filament\Forms;
 use Filament\Forms\Components\Component;
 use Guava\FilamentClusters\Forms\Cluster;
+use Illuminate\Support\Str;
 
 class Heading extends Component
 {
@@ -23,7 +24,7 @@ class Heading extends Component
                     ->required($required)
                     ->maxLength(255),
 
-                HeadingTagSelect::make(name: $name.'_tag', label: 'Tag', required: $required, default: $defaultTag)
+                TagSelect::make(name: Str::camel($name.'_tag'), label: 'Tag', required: $required, default: $defaultTag)
                     ->columnSpan(['lg' => 2]),
             ]);
     }
