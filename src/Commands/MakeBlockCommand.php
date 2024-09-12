@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 namespace MartinRo\FilamentBlocks\Commands;
 
 use Filament\Support\Commands\Concerns\CanIndentStrings;
