@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace MartinRo\FilamentBlocks\Components;
 
 use Filament\Forms;
@@ -7,7 +9,7 @@ use Filament\Forms\Components\Component;
 use Guava\FilamentClusters\Forms\Cluster;
 use Illuminate\Support\Str;
 
-class Heading extends Component
+final class Heading extends Component
 {
     public static function make(
         string $name = 'heading',

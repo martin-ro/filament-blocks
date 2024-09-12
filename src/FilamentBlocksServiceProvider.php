@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace MartinRo\FilamentBlocks;
 
 use Illuminate\Filesystem\Filesystem;
@@ -13,14 +15,14 @@ use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Symfony\Component\Finder\SplFileInfo;
 
-class FilamentBlocksServiceProvider extends PackageServiceProvider
+final class FilamentBlocksServiceProvider extends PackageServiceProvider
 {
     public static string $name = 'filament-blocks';
 
     public function configurePackage(Package $package): void
     {
         $package
-            ->name(static::$name)
+            ->name(self::$name)
             ->hasViews('filament-blocks')
             ->hasCommands([
                 MakeBlockCommand::class,

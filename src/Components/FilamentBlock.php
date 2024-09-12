@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace MartinRo\FilamentBlocks\Components;
 
 use Filament\Forms\Components\Builder\Block;

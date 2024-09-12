@@ -1,18 +1,15 @@
 <?php
 
+declare(strict_types=1);
+
 namespace MartinRo\FilamentBlocks\Components;
 
 use Filament\Forms;
 use Filament\Forms\Components\Hidden;
 use Illuminate\Database\Eloquent\Model;
 
-class CacheKey extends Hidden
+final class CacheKey extends Hidden
 {
-    public static function make(string $name = 'cacheKey'): static
-    {
-        return parent::make($name);
-    }
-
     protected function setUp(): void
     {
         parent::setUp();
@@ -29,5 +26,10 @@ class CacheKey extends Hidden
 
             $set('cacheKey', $key);
         });
+    }
+
+    public static function make(string $name = 'cacheKey'): static
+    {
+        return parent::make($name);
     }
 }

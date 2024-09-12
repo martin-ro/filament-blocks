@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace MartinRo\FlowbiteBlocks;
 
 use Illuminate\Support\Collection;
@@ -7,10 +9,10 @@ use InvalidArgumentException;
 use MartinRo\FilamentBlocks\Components\FilamentBlock;
 use MartinRo\FilamentPageBlocks\Exceptions\InvalidClassTypeException;
 
-class FilamentBlocksManager
+final class FilamentBlocksManager
 {
     /** @var Collection<string,string> */
-    protected Collection $blocks;
+    private Collection $blocks;
 
     public function __construct()
     {
@@ -28,7 +30,7 @@ class FilamentBlocksManager
     public function register(string $class, string $baseClass): void
     {
         match ($baseClass) {
-            FilamentBlock::class => static::registerBlock($class),
+            FilamentBlock::class => self::registerBlock($class),
             default => throw new InvalidClassTypeException('Invalid class type'),
         };
     }

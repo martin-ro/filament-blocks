@@ -1,10 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace MartinRo\FilamentBlocks\Components;
 
 use Filament\Forms\Components\Select;
 
-class TagSelect extends Select
+final class TagSelect extends Select
 {
     public static function make(
         string $name = 'heading_tag',

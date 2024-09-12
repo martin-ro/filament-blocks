@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace MartinRo\FilamentBlocks\Commands;
 
 use Filament\Support\Commands\Concerns\CanIndentStrings;
@@ -9,7 +11,7 @@ use Illuminate\Support\Str;
 
 use function Laravel\Prompts\text;
 
-class MakeBlockCommand extends Command
+final class MakeBlockCommand extends Command
 {
     use CanIndentStrings;
     use CanManipulateFiles;
@@ -67,7 +69,7 @@ class MakeBlockCommand extends Command
         $files = [$path, $viewPath];
 
         if (! $this->option('force') && $this->checkForCollision($files)) {
-            return static::INVALID;
+            return self::INVALID;
         }
 
         $this->copyStubToApp('Block', $path, [
@@ -82,6 +84,6 @@ class MakeBlockCommand extends Command
 
         $this->info("Successfully created {$block}!");
 
-        return static::SUCCESS;
+        return self::SUCCESS;
     }
 }
