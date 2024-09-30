@@ -25,8 +25,8 @@ class MyHero extends FilamentBlock
     public static function getBlockSchema(): Block
     {
         return Block::make('hero.my-hero')
-            ->label('My Hero')
-            ->icon('phosphor-cards-three')
+            ->label('Hero: My Hero')
+            ->icon('heroicon-o-rectangle-stack')
             ->preview('components.blocks.hero.my-hero')
             ->schema([
                 //

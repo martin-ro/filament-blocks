@@ -20,7 +20,10 @@ final class MakeBlockCommand extends Command
 
     public function handle(): int
     {
-        $block = (string) Str::of($this->argument('name') ?? text(label: 'Name (e.g. `Hero`)', required: true))
+        $block = (string) Str::of($this->argument('name') ?? text(
+            label: 'Name (e.g. `Hero`)',
+            required: true,
+        ))
             ->trim('/')
             ->trim('\\')
             ->trim(' ')
@@ -34,7 +37,7 @@ final class MakeBlockCommand extends Command
         $label = Str::of($block)
             ->beforeLast('Block')
             ->explode('\\')
-            ->map(fn ($segment) => Str::title($segment))
+            ->map(fn ($segment) => Str::studly($segment))
             ->implode(': ');
 
         $shortName = Str::of($block)
