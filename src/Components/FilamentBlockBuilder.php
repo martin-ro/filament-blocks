@@ -12,7 +12,7 @@ final class FilamentBlockBuilder extends Builder
     {
         parent::setUp();
 
-        $this->label(null);
+        $this->hiddenLabel();
 
         $this->addActionLabel('Add Block');
 
