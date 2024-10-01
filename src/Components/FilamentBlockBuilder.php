@@ -26,6 +26,10 @@ final class FilamentBlockBuilder extends Builder
 
         $this->blockPickerColumns(3);
 
+        $this->blockPickerWidth('5xl');
+
+        $this->blockIcons();
+
         $this->deleteAction(
             fn (Action $action) => $action->requiresConfirmation(),
         );
