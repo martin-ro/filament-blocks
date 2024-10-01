@@ -2,6 +2,11 @@
 
 All notable changes to `filament-blocks` will be documented in this file.
 
+## 1.0.4 - 2024-10-02
+
+- Blocker picker width set to 5xl by default
+- Show block icons by default
+
 ## 1.0.3 - 2024-10-01
 
 - Hide the label of `FilamentBlockBuilder` by default
