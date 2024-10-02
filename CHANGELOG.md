@@ -2,6 +2,9 @@
 
 All notable changes to `filament-blocks` will be documented in this file.
 
+## 1.0.7 - 2024-10-02
+- Remove support components (Heading)
+
 ## 1.0.6 - 2024-10-02
 
 - Blocker picker width set to 5xl by default
